@@ -9,31 +9,6 @@
  the_post(); ?>
 
 
- <div class="business group">
-
- <div class="info">
-
- <h2>Morbi leo risus, porta ac consectetur</h2>
-
- <p>Ac, vestibulum at eros. Praesent commodo cursus 
-
- magna, vel scelerisque nisl consectetur et. Maecenas 
-
- faucibus mollis interdum. Lorem ipsum dolor sit 
-
- amet, consectetur adipiscing elit.</p>
-
- <p class="contact"><a href="#">Site</a> / <a href="#"> 
-
- Contact</a></p>
-
- </div>
-
- <img src="images/biz.jpg" />
-
-</div>
-
-
 
 <?php 
 
