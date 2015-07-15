@@ -16,11 +16,7 @@ add_action("admin_init", "business_manager_add_meta");
 
 function business_manager_add_meta(){ 
 
- add_meta_box("business-meta", "Business Details", 
-
- "business_manager_meta_options", "business", 
-
- "normal", "high"); 
+ add_meta_box("business-meta", "Business Details", "business_manager_meta_options", "business",  "normal", "high"); 
 
 }
 
@@ -191,7 +187,7 @@ function business_manager_save_extras(){
 
 }
 
-			add_action("manage_business_posts_custom_column","business_manager_custom_columns"); 
+	
 
 
 
