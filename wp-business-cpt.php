@@ -1,11 +1,6 @@
 <?php
-
-
-
    ///////////////////////////////////// Business Post ///////////////////////////////////
-
-
-add_action( 'init', 'business_post_type', 0 );
+		add_action( 'init', 'business_post_type', 0 );
 
 function business_post_type() {
 
@@ -25,7 +20,7 @@ function business_post_type() {
 		'search_items'        => __( 'Search Businesses' ),
 		'not_found'           => __( 'No Business found'),
 		'not_found_in_trash'  => __( 'Not Business in Trash'),
-	);
+		);
 	$args = array(
 		'label'               => __( 'Business', 'text_domain' ),
 		'singular_label' => __('Business'),
@@ -62,87 +57,44 @@ function business_post_type() {
 			'thumbnail'
 
 			)
-	);
+		);
 	register_post_type( 'business', $args );
 
 
 	register_taxonomy("business-type", array("businesses"),
 
-    array("hierarchical" => true, "label" => "Business 
-
-    Types", "singular_label" => "Business Type", "rewrite" 
-
-  	=> true, "slug" => 'business-type'));
+		array(
+			  "hierarchical" => true, 
+			  "label" => "Business Types", 
+			  "singular_label" => "Business Type", 
+			  "rewrite" => true, 
+			  "slug" => 'business-type'
+			  )
+		);
 
 }
 
-add_action('init', 'director_rewrite');
+	add_action('init', 'director_rewrite');
+
 
 function director_rewrite() {
 
- global $wp_rewrite;
+	global $wp_rewrite;
 
- $wp_rewrite->add_permastruct('typename', 'typename/ ▶
+	$wp_rewrite->add_permastruct('typename', 'typename/ ▶ %year%/%postname%/', true, 1);
 
- %year%/%postname%/', true, 1);
+	add_rewrite_rule('typename/([0-9]{4})/(.+)/?$', 'index.php?typename=$matches[2]', 'top');
 
- add_rewrite_rule('typename/([0-9]{4})/(.+)/?$', 
-
- 'index.php?typename=$matches[2]', 'top');
-
- $wp_rewrite->flush_rules();
+	$wp_rewrite->flush_rules();
 
 }
 
+?>
 
 
 
 
 
-// Hook into the 'init' action
-
-/////////////////////////////////////////////////////////////////////////////////////////
-//Taxonomy 
-
-// function business_register_taxonomy(){
-
-// 	$plural ='Locations';
-// 	$singular  ='Location';
-
-// 	$labels = array(
-// 		'name'							=>$plural,
-// 		'singular_name'					=>$singular,
-// 		'search_items'					=>'Search' . $plural,
-// 		'popular_items'					=>'Popular' . $plural,
-// 		'all_items'						=>'All' .	$plural,
-// 		'parent_item'					=>null,
-// 		'parent_item_colon'				=>null,
-// 		'edit_item'						=>'Edit ' .$singular,
-// 		'update_item'					=>'Update ' .$singular,
-// 		'add_new_item'					=>'Add New ' .$singular,
-// 		'new_item_name'					=>'New ' . $singular . ' Name',
-// 		'separate_items_with_commas'	=>'Separate ' .$plural. ' with commas',
-// 		'add_or_remove_items'			=>'Add or remove ' .$plural,
-// 		'choose_from_most_used'			=>'Choose from the most used ' . $plural,
-// 		'not_found'						=>'No ' .$plural  . ' found',
-// 		'menu_name'						=>$plural,
-// 	);	
-
-// 	$args = array(
-// 		'hierarchical' => true,
-// 		'labels'	   =>$labels,
-// 		'show_ui'	   => true,
-// 		'show_in_admin_column' => true,
-// 		'update_count_callback' => '_update_post_term_count',
-// 		'query_var'				=> true,
-// 		'rewrite'				=> array('slug' => 'location'),
-
-// 		);
-// 	register_taxonomy('location', 'post_type', $args);
-
-// }
-
-// add_action('init','business_register_taxonomy');
 
 
 

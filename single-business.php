@@ -6,9 +6,7 @@
 
  <?php if (have_posts()) : while (have_posts()) : 
 
- the_post(); ?>
-
-
+ 		the_post(); ?>
 
 <?php 
 
@@ -75,33 +73,9 @@
 
 </div>
 
-
-
-
-
-<!-- <p class="contact"> -->
-
-<?php 
-
- //if ($website != "" || $website != "http://"){ print "<a href=\"$website\">Site</a> / ";
-
- // }
-
- //if($email != ""){
-
- //print "<a href=\"mailto:$email\">Contact</a>";
-
- //
-
-?>
-
-<!-- </p> -->
-
-
-
 <?php endwhile; else: ?>
 
-<p><?php _e('No posts were found. Sorry!'); ?></p>
+		<p><?php _e('No posts were found. Sorry!'); ?></p>
 
 <?php endif; ?>
 
@@ -110,7 +84,7 @@
  <div class="right">
 
  
- <p>   <?php previous_posts_link('Previous'); ?>  <?php next_posts_link('Next'); ?>         </p>
+ 		<p>   <?php previous_posts_link('Previous'); ?>  <?php next_posts_link('Next'); ?>         </p>
 
  </div>
 
