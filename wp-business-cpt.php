@@ -1,6 +1,5 @@
 <?php
-   ///////////////////////////////////// Business Post ///////////////////////////////////
-		add_action( 'init', 'business_post_type', 0 );
+add_action( 'init', 'business_post_type', 0 );
 
 function business_post_type() {
 
@@ -20,7 +19,7 @@ function business_post_type() {
 		'search_items'        => __( 'Search Businesses' ),
 		'not_found'           => __( 'No Business found'),
 		'not_found_in_trash'  => __( 'Not Business in Trash'),
-		);
+	);
 	$args = array(
 		'label'               => __( 'Business', 'text_domain' ),
 		'singular_label' => __('Business'),
@@ -60,9 +59,7 @@ function business_post_type() {
 		);
 	register_post_type( 'business', $args );
 
-
 	register_taxonomy("business-type", array("businesses"),
-
 		array(
 			  "hierarchical" => true, 
 			  "label" => "Business Types", 
@@ -71,31 +68,15 @@ function business_post_type() {
 			  "slug" => 'business-type'
 			  )
 		);
-
 }
-
-	add_action('init', 'director_rewrite');
-
+add_action('init', 'director_rewrite');
 
 function director_rewrite() {
 
 	global $wp_rewrite;
-
 	$wp_rewrite->add_permastruct('typename', 'typename/ ▶ %year%/%postname%/', true, 1);
-
 	add_rewrite_rule('typename/([0-9]{4})/(.+)/?$', 'index.php?typename=$matches[2]', 'top');
-
 	$wp_rewrite->flush_rules();
-
 }
 
 ?>
-
-
-
-
-
-
-
-
-
