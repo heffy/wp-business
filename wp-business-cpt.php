@@ -1,4 +1,5 @@
 <?php
+
 add_action( 'init', 'business_post_type', 0 );
 
 function business_post_type() {
@@ -51,14 +52,12 @@ function business_post_type() {
 		'supports'=> array(
 			'title',
 			'editor',
-			'author',
-			'custom-fields',
 			'thumbnail'
 			)
 		);
 	register_post_type( 'business', $args );
 
-	register_taxonomy("business-type", array("businesses"),
+	register_taxonomy("business-type", array("business"),
 		array(
 			  "hierarchical" => true, 
 			  "label" => "Business Types", 
