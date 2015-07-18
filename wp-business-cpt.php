@@ -54,7 +54,6 @@ function business_post_type() {
 			'author',
 			'custom-fields',
 			'thumbnail'
-
 			)
 		);
 	register_post_type( 'business', $args );
@@ -69,14 +68,13 @@ function business_post_type() {
 			  )
 		);
 }
-add_action('init', 'director_rewrite');
 
-function director_rewrite() {
-
+function purely_penzance_rewrite() {
 	global $wp_rewrite;
 	$wp_rewrite->add_permastruct('typename', 'typename/ ▶ %year%/%postname%/', true, 1);
 	add_rewrite_rule('typename/([0-9]{4})/(.+)/?$', 'index.php?typename=$matches[2]', 'top');
 	$wp_rewrite->flush_rules();
 }
+add_action('init', 'purely_penzance_rewrite');
 
 ?>
