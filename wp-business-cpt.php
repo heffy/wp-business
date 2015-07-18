@@ -60,10 +60,10 @@ function business_post_type() {
 	register_taxonomy("business-type", array("business"),
 		array(
 			  "hierarchical" => true, 
-			  "label" => "Business Types", 
-			  "singular_label" => "Business Type", 
+			  "label" => "Shopping Categories", 
+			  "singular_label" => "Shopping Category", 
 			  "rewrite" => true, 
-			  "slug" => 'business-type'
+			  "slug" => 'shopping'
 			  )
 		);
 }
