@@ -81,32 +81,32 @@ function business_manager_meta_options(){
 
 	<div>
 		<label>Phone Number:</label>
-		<input name="phone" type="tel" value="<?php echo $phone; ?>" />
+		<input name="phone" value="<?php echo $phone; ?>" />
 	</div>
 
 	<div>
 		<label>WebAddress:</label>
-		<input name="website" type="url" value="<?php echo $website; ?>" />
+		<input name="website" value="<?php echo $website; ?>" />
 	</div>
 
 	<div>
 		<label>Facebook URL:</label>
-		<input name="facebook_url" type="url" value="<?php echo $facebook_url; ?>" />
+		<input name="facebook_url" value="<?php echo $facebook_url; ?>" />
 	</div>
 
 	<div>
 		<label>Twitter URL:</label>
-		<input name="twitter_url" type="url" value="<?php echo $twitter_url; ?>" />
+		<input name="twitter_url" value="<?php echo $twitter_url; ?>" />
 	</div>
 
 	<div>
 		<label>Google URL:</label>
-		<input name="google_url"  type="url" value="<?php echo $google_url; ?>" />
+		<input name="google_url" value="<?php echo $google_url; ?>" />
 	</div>
 
 	<div>
 		<label>Instagram URL:</label>
-		<input name="instagram_url" type="url" value="<?php echo $instagram_url; ?>" />
+		<input name="instagram_url" value="<?php echo $instagram_url; ?>" />
 	</div>
 
 	<div>
