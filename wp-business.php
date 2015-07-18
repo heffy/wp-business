@@ -1,4 +1,4 @@
- <?php
+<?php
 /*
 Plugin Name: Purely Penzance Custom Business Post
 Plugin URI: https://github.com/heffy/wp-business
