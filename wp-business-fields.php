@@ -49,12 +49,6 @@ function business_manager_meta_options(){
 
 <div class="business_manager_extras">
 	<?php
-		 $website= ($website == "") ? "http://" : $website;
-		 $facebook_url = ($facebook_url == "") ? "http://" : $facebook_url;
-		 $twitter_url = ($twitter_url == "") ? "http://" : $twitter_url;
-		 $google_url = ($google_url == "") ? "http://" :  $google_url;
-		 $instagram_url = ($instagram_url == "") ? "http://" :  $instagram_url;
-		 $trip_advisor_url= ($trip_advisor_url== "") ? "http://" :  $trip_advisor_url;
 		 $town_address = ($town_address == "") ? "Penzance" :  $town_address;
 		 $phone = ($phone == "") ? "01736" :  $phone;
 	?>
