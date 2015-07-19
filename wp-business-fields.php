@@ -4,10 +4,13 @@ if (function_exists('add_theme_support')) {
  add_theme_support('post-thumbnails');
  set_post_thumbnail_size( 220, 150 );
  add_image_size('storefront', 620, 270, true);
-
 }
 add_action("admin_init", "business_manager_add_meta"); 
 
+function remove_post_custom_fields() {
+	remove_meta_box('tagsdiv-post_tag', 'business', 'side');
+}
+add_action( 'admin_menu' , 'remove_post_custom_fields' );
 
 function business_manager_add_meta(){ 
   add_meta_box("business-meta", "Business Details", "business_manager_meta_options", "business",  "normal", "high"); 
